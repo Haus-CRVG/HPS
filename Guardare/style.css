@@ -1,0 +1,706 @@
+/* ==========================================================================
+   1. VARIÁVEIS DE COR E CONFIGURAÇÕES GERAIS DE RESET
+   ========================================================================== */
+:root {
+  --blue: #0f3d5c;    /* Cor azul principal dos botões e destaques */
+  --deep: #0a2c42;    /* Cor azul escuro para títulos e contrastes */
+  --cyan: #14b8c4;    /* Cor ciano para detalhes e acentos */
+  --bg: #f6f9fb;      /* Cor de fundo padrão da página */
+  --surface: #fff;    /* Cor de fundo branca para cards/painéis */
+  --ink: #101a24;     /* Cor padrão de texto da página */
+  --muted: #5b6b78;   /* Cor cinza para textos secundários */
+  --line: #e2e8ee;    /* Cor das linhas de borda e divisores */
+  --max: 1180px;     /* Largura máxima do conteúdo centralizado */
+}
+
+/* Configuração para cálculo correto das dimensões de elementos */
+* {
+  box-sizing: border-box;
+}
+
+/* Rolagem suave ao clicar nos links da navegação */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Estilos de corpo e tipografia global */
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Centralização do conteúdo principal */
+.header-inner,
+main,
+.footer-inner {
+  width: min(var(--max), calc(100% - 48px));
+  margin: auto;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO (HEADER) E LOGO COM AJUSTES DE TAMANHO E FUNDO
+   ========================================================================== */
+header {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(12px);
+}
+
+.header-inner {
+  height: 84px;               /* Altura fixa do cabeçalho */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Container do link da logo no cabeçalho */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  max-height: 100%;           /* Evita que o container ultrapasse a altura do header */
+}
+
+/* 
+ * AJUSTE DA LOGO NO CABEÇALHO:
+ * - height/max-height: limita a altura para que a imagem não atropele a borda inferior.
+ * - mix-blend-mode: multiply: oculta o fundo branco da imagem JPG.
+ */
+.logo-img {
+  height: 110px;               /* Altura ideal proporcional para o cabeçalho de 84px */
+  max-height: 100%;           /* Garante que a imagem nunca estoure o limite do container */
+  width: auto;                /* Mantém a proporção da imagem */
+  display: block;
+  object-fit: contain;        /* Mantém a integridade sem distorcer a imagem */
+  mix-blend-mode: multiply;   /* Faz o fundo branco puro da imagem JPG ficar transparente */
+}
+
+/* Marcador alternativo em texto/gradiente (caso não use imagem) */
+.mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: linear-gradient(145deg, var(--blue), var(--cyan));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.logo strong {
+  color: var(--blue);
+}
+
+/* ==========================================================================
+   3. MENU DE NAVEGAÇÃO E BOTÕES DE AÇÃO
+   ========================================================================== */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+nav a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background: var(--blue);
+  border-radius: 8px;
+  color: #fff !important;
+}
+
+/* Botão hambúrguer para dispositivos móveis */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--blue);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Estilos de botões da página */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 26px;
+  border-radius: 9px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.button.primary {
+  background: var(--blue);
+  color: #fff;
+}
+
+.button.primary:hover {
+  background: var(--deep);
+  transform: translateY(-1px);
+}
+
+.button.ghost {
+  border: 1.5px solid var(--line);
+  color: var(--blue);
+  background: #fff;
+}
+
+.button.light {
+  background: #fff;
+  color: var(--deep);
+}
+
+/* ==========================================================================
+   4. SEÇÃO HERO (APRESENTAÇÃO INICIAL)
+   ========================================================================== */
+.hero {
+  padding: 92px 0 90px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.eyebrow,
+.kicker {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 12px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  font-weight: 800;
+  margin: 0 0 24px;
+  color: var(--deep);
+  max-width: 680px;
+}
+
+.lead {
+  max-width: 580px;
+  color: var(--muted);
+  font-size: 18px;
+  margin: 0 0 34px;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-note {
+  margin: 22px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Cards decorativos do Hero */
+.hero-visual {
+  position: relative;
+  height: 370px;
+}
+
+.visual-card {
+  position: absolute;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 24px 55px rgba(15, 61, 92, 0.11);
+}
+
+.visual-card.main {
+  width: 310px;
+  min-height: 235px;
+  top: 38px;
+  left: 42px;
+  z-index: 2;
+  border-top: 3px solid var(--cyan);
+  padding: 26px;
+}
+
+.status-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.12);
+}
+
+.visual-card.main strong {
+  display: block;
+  font-size: 25px;
+  color: var(--deep);
+}
+
+.visual-card.main small {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.progress {
+  height: 7px;
+  background: #eaf0f4;
+  border-radius: 99px;
+  margin: 30px 0 18px;
+  overflow: hidden;
+}
+
+.progress span {
+  display: block;
+  width: 82%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+  border-radius: inherit;
+}
+
+.visual-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.visual-meta span {
+  color: var(--muted);
+}
+
+.visual-meta strong {
+  color: #16845d;
+  font-size: 12px;
+}
+
+.visual-card.secondary {
+  width: 190px;
+  padding: 17px 19px;
+  opacity: 0.9;
+}
+
+.visual-card.secondary span {
+  display: block;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.visual-card.secondary small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.visual-card.secondary:not(.offset) {
+  top: 215px;
+  left: 0;
+}
+
+.visual-card.secondary.offset {
+  top: 255px;
+  right: 0;
+}
+
+/* ==========================================================================
+   5. SEÇÕES DE CONTEÚDO (BENEFÍCIOS, PASSO A PASSO, RECURSOS E PLANOS)
+   ========================================================================== */
+.section {
+  padding: 90px 0;
+}
+
+.section-head {
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+.section-head h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  letter-spacing: -0.025em;
+  font-weight: 800;
+  margin: 0 0 14px;
+  color: var(--deep);
+  line-height: 1.15;
+}
+
+.section-desc {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Seção Benefícios */
+.benefits {
+  padding-top: 20px;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.benefit {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  padding: 28px 24px;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(15, 61, 92, 0.08), rgba(20, 184, 196, 0.12));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--blue);
+  font-weight: 800;
+  font-size: 21px;
+}
+
+.benefit h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+  color: var(--deep);
+}
+
+.benefit p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Seção Como Funciona */
+.how {
+  background: #fff;
+  width: 100%;
+  max-width: none;
+  padding-left: max(24px, calc((100vw - var(--max)) / 2));
+  padding-right: max(24px, calc((100vw - var(--max)) / 2));
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.step span {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--cyan);
+  margin-bottom: 12px;
+}
+
+.step h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+  color: var(--deep);
+}
+
+.step p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Seção Painel de Recursos */
+.feature-panel {
+  background: linear-gradient(120deg, var(--deep), var(--blue));
+  color: #fff;
+  border-radius: 22px;
+  padding: 62px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.feature-panel .kicker {
+  color: #67e2e8;
+}
+
+.feature-panel h2 {
+  color: #fff;
+  font-size: clamp(28px, 3.5vw, 40px);
+  line-height: 1.15;
+  margin: 0 0 18px;
+}
+
+.feature-panel p:not(.kicker) {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.feature-list {
+  display: grid;
+  gap: 14px;
+}
+
+.feature-list div {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 14px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Seção Planos */
+.plan-box {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.plan-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  color: #0a7d63;
+  background: #e3f8ef;
+  padding: 5px 10px;
+  border-radius: 99px;
+  margin-bottom: 12px;
+}
+
+.plan-box h3 {
+  font-size: 22px;
+  margin: 0 0 8px;
+  color: var(--deep);
+}
+
+.plan-box p {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Seção Contato */
+.contato {
+  padding-top: 40px;
+}
+
+.contato-box {
+  background: linear-gradient(120deg, var(--deep), var(--blue));
+  border-radius: 22px;
+  padding: 64px;
+  text-align: center;
+  color: #fff;
+}
+
+.contato-box .kicker {
+  color: #67e2e8;
+}
+
+.contato-box h2 {
+  color: #fff;
+  font-size: clamp(28px, 3.5vw, 40px);
+  margin: 0 0 12px;
+}
+
+.contato-box p:not(.kicker) {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   6. RODAPÉ (FOOTER) E LOGO SECUNDÁRIA
+   ========================================================================== */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 30px 0 44px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+  font-size: 13px;
+  gap: 20px;
+}
+
+.footer-inner a:hover {
+  color: var(--blue);
+}
+
+.logo.small {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+/* 
+ * AJUSTE DA LOGO NO RODAPÉ:
+ * - height: reduzida para 26px para manter proporcionalidade com as fontes do rodapé.
+ * - mix-blend-mode: multiply: também oculta o fundo branco caso o rodapé mude de cor.
+ */
+.logo-img-small {
+  height: 100px;               /* Tamanho menor adequado para a altura do rodapé */
+  max-height: 100%;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+  mix-blend-mode: multiply;   /* Remove o fundo branco da imagem */
+}
+
+.logo.small .mark {
+  width: 22px;
+  height: 22px;
+  font-size: 11px;
+  border-radius: 6px;
+}
+
+/* ==========================================================================
+   7. RESPONSIVIDADE (ADAPTAÇÃO PARA TABLETS E CELULARES)
+   ========================================================================== */
+@media (max-width: 980px) {
+  nav {
+    display: none;
+    position: absolute;
+    right: 24px;
+    top: 76px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    min-width: 230px;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.08);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 60px 0;
+  }
+
+  .hero-visual {
+    max-width: 520px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .benefit-grid,
+  .steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .feature-panel {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header-inner,
+  main,
+  .footer-inner {
+    width: calc(100% - 32px);
+  }
+
+  /* Redução extra na logo em telas pequenas de celular para não estourar a barra */
+  .logo-img {
+    height: 32px;
+  }
+
+  .hero {
+    padding: 48px 0 60px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .benefit-grid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-panel {
+    padding: 38px 26px;
+  }
+
+  .plan-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px;
+  }
+
+  .contato-box {
+    padding: 42px 24px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
