@@ -41,17 +41,11 @@
         class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
       >
         <a class="flex items-center gap-3" href="#">
-          <div
-            class="grid h-10 w-10 place-items-center rounded-xl bg-cyan-300/10 text-xl font-extrabold text-cyan-300 ring-1 ring-cyan-300/20"
-          >
-            G
-          </div>
-          <div>
-            <div class="text-lg font-extrabold">Guardare</div>
-            <div class="text-[10px] uppercase tracking-[.22em] text-slate-500">
-              Backup &amp; prote&ccedil;&atilde;o
-            </div>
-          </div>
+          <img
+            src="logo-guardare.jpg"
+            alt="Guardare"
+            class="h-10 w-auto object-contain"
+          />
         </a>
         <nav class="hidden gap-7 text-sm text-slate-300 md:flex">
           <a class="hover:text-cyan-300" href="#problema"> Por que proteger </a>
@@ -425,10 +419,20 @@
             </div>
           </div>
           <div class="mt-8 space-y-4 text-sm text-slate-300">
-          <p>📍 Rua Marechal Floriano, 1280 — Neva, Cascavel - PR</p>
-          <p>📞 <a class="hover:text-cyan-400" href="tel:+5545999153585">(45) 9 9915-3585</a></p>
-          <p>✉️ <a class="hover:text-cyan-400" href="mailto:contato@hps.dev.br">contato@hps.dev.br</a></p>
-        </div>
+            <p>📍 Rua Marechal Floriano, 1280 — Neva, Cascavel - PR</p>
+            <p>
+              📞
+              <a class="hover:text-cyan-400" href="tel:+5545999153585"
+                >(45) 9 9915-3585</a
+              >
+            </p>
+            <p>
+              ✉️
+              <a class="hover:text-cyan-400" href="mailto:contato@hps.dev.br"
+                >contato@hps.dev.br</a
+              >
+            </p>
+          </div>
         </div>
         <form
           class="reveal rounded-3xl border border-white/10 bg-slate-950/70 p-6 sm:p-8"
@@ -530,13 +534,31 @@
     </footer>
     <!-- WhatsApp -->
     <a
-      href="https://wa.me/5545999153585"
+      href="https://wa.me/5545999153585?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Guardare."
       target="_blank"
-      aria-label="Falar com a Haus <strong>Pro</strong> Solutions pelo WhatsApp"
-      class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500 text-2xl shadow-2xl shadow-emerald-900/40 hover:scale-105 transition"
+      rel="noopener noreferrer"
+      aria-label="Falar com a Haus Pro Solutions pelo WhatsApp"
+      style="
+        position: fixed;
+        right: 20px;
+        bottom: 95px;
+        z-index: 9999;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        background-color: #22c55e;
+        color: white;
+        font-size: 28px;
+        text-decoration: none;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        transition: transform 0.2s ease;
+      "
     >
-      💬
-    </a>
+      💬 </a
+    >
     <script>
       const observer = new IntersectionObserver(
         (es) =>
