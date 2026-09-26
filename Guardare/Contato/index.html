@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Guardare | Backup em Nuvem para Empresas</title>
+    <meta
+      content="Backup em nuvem, monitoramento e recupera&ccedil;&atilde;o para empresas."
+      name="description"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: Inter, sans-serif;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: 0.7s ease;
+      }
+      .reveal.show {
+        opacity: 1;
+        transform: none;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-950 text-slate-100">
+    <header
+      class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
+      >
+        <a class="flex items-center gap-3" href="#">
+          <div
+            class="grid h-10 w-10 place-items-center rounded-xl bg-cyan-300/10 text-xl font-extrabold text-cyan-300 ring-1 ring-cyan-300/20"
+          >
+            G
+          </div>
+          <div>
+            <div class="text-lg font-extrabold">Guardare</div>
+            <div class="text-[10px] uppercase tracking-[.22em] text-slate-500">
+              Backup &amp; prote&ccedil;&atilde;o
+            </div>
+          </div>
+        </a>
+        <nav class="hidden gap-7 text-sm text-slate-300 md:flex">
+          <a class="hover:text-cyan-300" href="#problema"> Por que proteger </a>
+          <a class="hover:text-cyan-300" href="#solucao">
+            Solu&ccedil;&atilde;o
+          </a>
+          <a class="hover:text-cyan-300" href="#recursos"> Recursos </a>
+          <a class="hover:text-cyan-300" href="#contato"> Contato </a>
+        </nav>
+        <a
+          class="rounded-lg bg-cyan-300 px-4 py-2 text-sm font-bold text-slate-950 hover:bg-cyan-200"
+          href="#contato"
+        >
+          Fale conosco
+        </a>
+      </div>
+    </header>
+    <section class="relative overflow-hidden pt-36 pb-24">
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(34,211,238,.14),transparent_35%),radial-gradient(circle_at_15%_70%,rgba(59,130,246,.08),transparent_30%)]"
+      ></div>
+      <div
+        class="relative mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2"
+      >
+        <div class="reveal">
+          <div
+            class="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/5 px-3 py-1 text-xs font-semibold text-cyan-200"
+          >
+            <span class="h-2 w-2 rounded-full bg-cyan-300"> </span>
+            Backup em nuvem para empresas
+          </div>
+          <h1
+            class="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
+          >
+            Seus dados est&atilde;o realmente
+            <span class="text-cyan-300"> protegidos? </span>
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+            Falhas, exclus&otilde;es acidentais, ransomware e problemas de
+            hardware podem colocar informa&ccedil;&otilde;es importantes em
+            risco. O Guardare ajuda sua empresa a manter c&oacute;pias
+            protegidas e prontas para recupera&ccedil;&atilde;o.
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a
+              class="rounded-xl bg-cyan-300 px-6 py-3 text-center font-bold text-slate-950 hover:bg-cyan-200"
+              href="#contato"
+            >
+              Quero proteger meus dados
+            </a>
+            <a
+              class="rounded-xl border border-white/15 px-6 py-3 text-center font-semibold hover:bg-white/5"
+              href="#solucao"
+            >
+              Conhecer a solu&ccedil;&atilde;o
+            </a>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-5 text-sm text-slate-400">
+            <span> &checkmark; Backup automatizado </span>
+            <span> &checkmark; Monitoramento 24x7 </span>
+            <span> &checkmark; Recupera&ccedil;&atilde;o de dados </span>
+          </div>
+        </div>
+        <div class="reveal">
+          <div
+            class="mx-auto max-w-lg rounded-3xl border border-white/10 bg-white/[.035] p-6 shadow-[0_0_80px_rgba(34,211,238,.10)]"
+          >
+            <div class="mb-6 flex items-center justify-between">
+              <div>
+                <div class="text-sm text-slate-400">
+                  Status da prote&ccedil;&atilde;o
+                </div>
+                <div class="mt-1 text-xl font-bold">Ambiente protegido</div>
+              </div>
+              <div
+                class="rounded-full bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-300"
+              >
+                ONLINE
+              </div>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-5">
+              <div class="flex justify-between text-sm">
+                <span class="text-slate-400"> Backup </span>
+                <span class="font-semibold text-cyan-300">
+                  Prote&ccedil;&atilde;o ativa
+                </span>
+              </div>
+              <div class="mt-4 h-3 overflow-hidden rounded-full bg-slate-800">
+                <div class="h-full w-[92%] rounded-full bg-cyan-300"></div>
+              </div>
+              <div class="mt-3 flex justify-between text-xs text-slate-500">
+                <span> Automa&ccedil;&atilde;o </span>
+                <span> Monitoramento </span>
+                <span> Relat&oacute;rios </span>
+              </div>
+            </div>
+            <div class="mt-4 grid grid-cols-2 gap-4">
+              <div class="rounded-2xl border border-white/10 p-4">
+                <div class="text-xs text-slate-500">Armazenamento</div>
+                <div class="mt-1 font-bold">Em nuvem</div>
+              </div>
+              <div class="rounded-2xl border border-white/10 p-4">
+                <div class="text-xs text-slate-500">Gest&atilde;o</div>
+                <div class="mt-1 font-bold">Centralizada</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="border-y border-white/10 bg-slate-900/50 py-24"
+      id="problema"
+    >
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal max-w-2xl">
+          <div
+            class="text-sm font-bold uppercase tracking-[.2em] text-cyan-300"
+          >
+            O problema
+          </div>
+          <h2 class="mt-3 text-3xl font-extrabold sm:text-4xl">
+            Um backup que n&atilde;o &eacute; acompanhado tamb&eacute;m pode
+            falhar.
+          </h2>
+          <p class="mt-4 text-slate-400">
+            Ter uma c&oacute;pia dos dados &eacute; apenas parte da
+            estrat&eacute;gia. &Eacute; importante automatizar, monitorar e ter
+            um caminho confi&aacute;vel para recuperar as
+            informa&ccedil;&otilde;es quando necess&aacute;rio.
+          </p>
+        </div>
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div
+            class="reveal rounded-2xl border border-white/10 bg-white/[.03] p-6"
+          >
+            <div class="text-2xl">💾</div>
+            <h3 class="mt-5 font-bold">Falha de hardware</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-400">
+              Servidores, discos e equipamentos podem apresentar falhas
+              inesperadas.
+            </p>
+          </div>
+          <div
+            class="reveal rounded-2xl border border-white/10 bg-white/[.03] p-6"
+          >
+            <div class="text-2xl">🗑️</div>
+            <h3 class="mt-5 font-bold">Exclus&atilde;o acidental</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-400">
+              Um arquivo apagado ou alterado pode representar anos de trabalho.
+            </p>
+          </div>
+          <div
+            class="reveal rounded-2xl border border-white/10 bg-white/[.03] p-6"
+          >
+            <div class="text-2xl">🔒</div>
+            <h3 class="mt-5 font-bold">Ransomware</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-400">
+              Ataques podem comprometer os dados de produ&ccedil;&atilde;o e
+              tentar atingir os backups.
+            </p>
+          </div>
+          <div
+            class="reveal rounded-2xl border border-white/10 bg-white/[.03] p-6"
+          >
+            <div class="text-2xl">⚠️</div>
+            <h3 class="mt-5 font-bold">Imprevistos</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-400">
+              Erros humanos e incidentes podem interromper a
+              opera&ccedil;&atilde;o.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-24" id="solucao">
+      <div
+        class="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-2 lg:items-center"
+      >
+        <div class="reveal">
+          <div
+            class="text-sm font-bold uppercase tracking-[.2em] text-cyan-300"
+          >
+            A solu&ccedil;&atilde;o
+          </div>
+          <h2 class="mt-3 text-3xl font-extrabold sm:text-4xl">
+            Backup em nuvem com gest&atilde;o e acompanhamento.
+          </h2>
+          <p class="mt-5 leading-8 text-slate-400">
+            O Guardare utiliza a plataforma Datasafer Cloud Backup, com
+            gerenciamento remoto, monitoramento 24x7, relat&oacute;rios
+            centralizados e suporte a diferentes cargas de backup.
+          </p>
+          <div class="mt-8 space-y-4">
+            <div class="flex gap-4">
+              <span class="text-cyan-300"> &checkmark; </span>
+              <div>
+                <b> Arquivos e pastas </b>
+                <p class="text-sm text-slate-400">
+                  Prote&ccedil;&atilde;o dos dados importantes da empresa.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="text-cyan-300"> &checkmark; </span>
+              <div>
+                <b> Bancos de dados </b>
+                <p class="text-sm text-slate-400">
+                  Prote&ccedil;&atilde;o para ambientes corporativos e
+                  aplica&ccedil;&otilde;es.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="text-cyan-300"> &checkmark; </span>
+              <div>
+                <b> M&aacute;quinas virtuais e servidores </b>
+                <p class="text-sm text-slate-400">
+                  Suporte a diferentes ambientes de infraestrutura.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="text-cyan-300"> &checkmark; </span>
+              <div>
+                <b> Microsoft 365 </b>
+                <p class="text-sm text-slate-400">
+                  Prote&ccedil;&atilde;o de Exchange, SharePoint, OneDrive e
+                  Teams.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="reveal rounded-3xl border border-cyan-300/10 bg-cyan-300/5 p-8"
+        >
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-7">
+            <div class="text-sm text-slate-400">
+              Estrat&eacute;gia de prote&ccedil;&atilde;o
+            </div>
+            <div class="mt-2 text-2xl font-bold">
+              Backup &rarr; Armazenamento &rarr; Monitoramento &rarr;
+              Recupera&ccedil;&atilde;o
+            </div>
+            <div class="mt-8 space-y-3">
+              <div class="rounded-xl bg-white/[.04] p-4">
+                <span class="mr-3 text-cyan-300"> 01 </span>
+                Backup autom&aacute;tico e agendado
+              </div>
+              <div class="rounded-xl bg-white/[.04] p-4">
+                <span class="mr-3 text-cyan-300"> 02 </span>
+                Criptografia dos dados
+              </div>
+              <div class="rounded-xl bg-white/[.04] p-4">
+                <span class="mr-3 text-cyan-300"> 03 </span>
+                Armazenamento em Data Centers Tier III no Brasil
+              </div>
+              <div class="rounded-xl bg-white/[.04] p-4">
+                <span class="mr-3 text-cyan-300"> 04 </span>
+                Restaura&ccedil;&atilde;o quando necess&aacute;rio
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="border-y border-white/10 bg-slate-900/50 py-24"
+      id="recursos"
+    >
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal text-center">
+          <div
+            class="text-sm font-bold uppercase tracking-[.2em] text-cyan-300"
+          >
+            Recursos
+          </div>
+          <h2 class="mt-3 text-3xl font-extrabold sm:text-4xl">
+            Mais do que simplesmente guardar uma c&oacute;pia.
+          </h2>
+          <p class="mx-auto mt-4 max-w-2xl text-slate-400">
+            Recursos da plataforma Datasafer utilizados na solu&ccedil;&atilde;o
+            de Cloud Backup oferecida pelo Guardare.
+          </p>
+        </div>
+        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="reveal rounded-2xl border border-white/10 p-6">
+            <b> Criptografia ponta a ponta </b>
+            <p class="mt-2 text-sm text-slate-400">
+              Prote&ccedil;&atilde;o dos dados durante o processo de backup.
+            </p>
+          </div>
+          <div class="reveal rounded-2xl border border-white/10 p-6">
+            <b> Backup autom&aacute;tico agendado </b>
+            <p class="mt-2 text-sm text-slate-400">
+              Rotinas programadas para reduzir processos manuais.
+            </p>
+          </div>
+          <div class="reveal rounded-2xl border border-white/10 p-6">
+            <b> Versionamento e reten&ccedil;&atilde;o </b>
+            <p class="mt-2 text-sm text-slate-400">
+              Pol&iacute;ticas para manter vers&otilde;es conforme a
+              estrat&eacute;gia definida.
+            </p>
+          </div>
+          <div class="reveal rounded-2xl border border-white/10 p-6">
+            <b> Gest&atilde;o centralizada </b>
+            <p class="mt-2 text-sm text-slate-400">
+              Gerenciamento dos ambientes de backup.
+            </p>
+          </div>
+          <div class="reveal rounded-2xl border border-white/10 p-6">
+            <b> Monitoramento 24x7 </b>
+            <p class="mt-2 text-sm text-slate-400">
+              Acompanhamento das rotinas de backup.
+            </p>
+          </div>
+          <div class="reveal rounded-2xl border border-white/10 p-6">
+            <b> Restaura&ccedil;&atilde;o granular </b>
+            <p class="mt-2 text-sm text-slate-400">
+              Recursos para recuperar os dados conforme a necessidade.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-24">
+      <div class="mx-auto max-w-5xl px-6">
+        <div
+          class="reveal rounded-3xl border border-cyan-300/20 bg-cyan-300/10 p-8 text-center sm:p-12"
+        >
+          <h2 class="text-3xl font-extrabold sm:text-4xl">
+            Quanto custaria proteger os dados da sua empresa?
+          </h2>
+          <p class="mx-auto mt-4 max-w-2xl text-slate-300">
+            Conte um pouco sobre seu ambiente. A equipe Guardare avalia sua
+            necessidade e entra em contato para apresentar uma proposta.
+          </p>
+          <a
+            class="mt-8 inline-block rounded-xl bg-cyan-300 px-7 py-3 font-bold text-slate-950 hover:bg-cyan-200"
+            href="#contato"
+          >
+            Solicitar contato
+          </a>
+        </div>
+      </div>
+    </section>
+    <section
+      class="border-t border-white/10 bg-slate-900/60 py-24"
+      id="contato"
+    >
+      <div class="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[.8fr_1.2fr]">
+        <div class="reveal">
+          <div
+            class="text-sm font-bold uppercase tracking-[.2em] text-cyan-300"
+          >
+            Fale conosco
+          </div>
+          <h2 class="mt-3 text-3xl font-extrabold sm:text-4xl">
+            Vamos entender o que sua empresa precisa proteger.
+          </h2>
+          <p class="mt-5 leading-8 text-slate-400">
+            Preencha o formul&aacute;rio e nossa equipe entra em contato.
+          </p>
+          <div class="mt-8 space-y-4 text-sm text-slate-300">
+            <div>&checkmark; Sem pre&ccedil;os expostos</div>
+            <div>&checkmark; Atendimento consultivo</div>
+            <div>
+              &checkmark; Avalia&ccedil;&atilde;o do ambiente e volume de dados
+            </div>
+          </div>
+          <div class="mt-8 space-y-4 text-sm text-slate-300">
+          <p>📍 Rua Marechal Floriano, 1280 — Neva, Cascavel - PR</p>
+          <p>📞 <a class="hover:text-cyan-400" href="tel:+5545999153585">(45) 9 9915-3585</a></p>
+          <p>✉️ <a class="hover:text-cyan-400" href="mailto:contato@hps.dev.br">contato@hps.dev.br</a></p>
+        </div>
+        </div>
+        <form
+          class="reveal rounded-3xl border border-white/10 bg-slate-950/70 p-6 sm:p-8"
+          id="leadForm"
+        >
+          <div class="grid gap-5 sm:grid-cols-2">
+            <label class="text-sm text-slate-300">
+              Nome
+              <input
+                class="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-cyan-300/50"
+                name="nome"
+                placeholder="Seu nome"
+                required=""
+              />
+            </label>
+            <label class="text-sm text-slate-300">
+              Empresa
+              <input
+                class="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-cyan-300/50"
+                name="empresa"
+                placeholder="Nome da empresa"
+              />
+            </label>
+            <label class="text-sm text-slate-300">
+              WhatsApp
+              <input
+                class="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-cyan-300/50"
+                name="whatsapp"
+                placeholder="(00) 00000-0000"
+                required=""
+              />
+            </label>
+            <label class="text-sm text-slate-300">
+              E-mail
+              <input
+                class="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-cyan-300/50"
+                name="email"
+                placeholder="voce@empresa.com"
+                required=""
+                type="email"
+              />
+            </label>
+            <label class="text-sm text-slate-300 sm:col-span-2">
+              O que voc&ecirc; precisa proteger?
+              <select
+                class="mt-2 w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3"
+                name="protecao"
+              >
+                <option>Arquivos e pastas</option>
+                <option>Banco de dados</option>
+                <option>Servidor</option>
+                <option>M&aacute;quina virtual</option>
+                <option>Microsoft 365</option>
+                <option>Ainda n&atilde;o sei</option>
+              </select>
+            </label>
+            <label class="text-sm text-slate-300 sm:col-span-2">
+              Volume aproximado
+              <select
+                class="mt-2 w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3"
+                name="volume"
+              >
+                <option>At&eacute; 100 GB</option>
+                <option>100 a 500 GB</option>
+                <option>500 GB a 1 TB</option>
+                <option>Mais de 1 TB</option>
+                <option>N&atilde;o sei informar</option>
+              </select>
+            </label>
+            <label class="text-sm text-slate-300 sm:col-span-2">
+              Mensagem
+              <textarea
+                class="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-cyan-300/50"
+                name="mensagem"
+                placeholder="Conte brevemente sobre seu ambiente..."
+                rows="4"
+              ></textarea>
+            </label>
+          </div>
+          <button
+            class="mt-6 w-full rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200"
+          >
+            Quero receber contato
+          </button>
+          <p
+            class="mt-4 hidden text-center text-sm text-cyan-300"
+            id="status"
+          ></p>
+        </form>
+      </div>
+    </section>
+    <footer class="border-t border-white/10 py-8">
+      <div
+        class="mx-auto flex max-w-7xl flex-col gap-2 px-6 text-sm text-slate-500 sm:flex-row sm:justify-between"
+      >
+        <span> &copy; 2026 Guardare &middot; Haus Pro Solutions </span>
+        <span> Backup e prote&ccedil;&atilde;o de dados para empresas </span>
+      </div>
+    </footer>
+    <!-- WhatsApp -->
+    <a
+      href="https://wa.me/5545999153585"
+      target="_blank"
+      aria-label="Falar com a Haus <strong>Pro</strong> Solutions pelo WhatsApp"
+      class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500 text-2xl shadow-2xl shadow-emerald-900/40 hover:scale-105 transition"
+    >
+      💬
+    </a>
+    <script>
+      const observer = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("show");
+          }),
+        { threshold: 0.08 },
+      );
+      document.querySelectorAll(".reveal").forEach((e) => observer.observe(e));
+      const GOOGLE_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbwauifC4ITv2iihCd2SXkaGXDSskVKg3ygFTt5GyvSjwzZ0QXEtSqwPgh8AwIvaSJ_u/exec";
+      const form = document.getElementById("leadForm");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const status = document.getElementById("status");
+        const button = form.querySelector("button");
+        const data = Object.fromEntries(new FormData(form).entries());
+        const params = new URLSearchParams(window.location.search);
+        data.data = new Date().toLocaleString("pt-BR");
+        data.origem = params.get("utm_source") || "site";
+        data.midia = params.get("utm_medium") || "";
+        data.campanha = params.get("utm_campaign") || "";
+        data.termo = params.get("utm_term") || "";
+        data.conteudo = params.get("utm_content") || "";
+        if (GOOGLE_SCRIPT_URL.includes("COLE_AQUI")) {
+          status.textContent =
+            "Formulário pronto. Configure a URL do Google Apps Script para ativar o envio.";
+          status.classList.remove("hidden");
+          return;
+        }
+        button.disabled = true;
+        button.textContent = "Enviando...";
+        try {
+          await fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(data).toString(),
+          });
+          form.reset();
+          status.textContent =
+            "Recebemos seus dados! Em breve nossa equipe entrará em contato.";
+          status.classList.remove("hidden");
+        } catch (err) {
+          status.textContent =
+            "Não foi possível enviar agora. Tente novamente ou entre em contato pelo WhatsApp.";
+          status.classList.remove("hidden");
+        } finally {
+          button.disabled = false;
+          button.textContent = "Quero receber contato";
+        }
+      });
+    </script>
+  </body>
+</html>
