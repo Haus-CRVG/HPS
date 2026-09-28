@@ -276,7 +276,32 @@ h2 {
 
 .card h3 { font-size: 19px; margin: 0 0 10px; color: var(--blue-deep); }
 .card p { font-size: 14px; color: var(--muted); min-height: 62px; margin: 0 0 14px; }
-.card a { color: var(--cyan); font-size: 13px; font-weight: 700; }
+/*.card a { color: var(--cyan); font-size: 13px; font-weight: 700; } */
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.card-actions a {
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.card-actions a:last-child {
+  color: var(--blue);
+  border: 1px solid var(--line);
+  padding: 7px 12px;
+  border-radius: 7px;
+  transition: all 0.2s ease;
+}
+
+.card-actions a:last-child:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
 
 /* PROCESSO */
 .steps {
